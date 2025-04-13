@@ -1,0 +1,60 @@
+.Card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .Card::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 30px);
+    height: calc(100% + 40px);
+    background: linear-gradient(
+      45deg,
+      #A0E5FA, #8CDBE3, #79D1CD, #65C8B6,
+      #52BEA0, #3EB489, #30916d, #A0E5FA
+    );
+    background-size: 600%;
+    z-index: -1;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    border-radius: 12px;
+  }
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+body{
+    background-color: rgb(39, 38, 38);
+}
+h3 {
+    font-size: 20px;
+  }
+body {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background : url("Dark-Background-04536.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      
+
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    color: rgb(0, 0, 0);
+
+}
